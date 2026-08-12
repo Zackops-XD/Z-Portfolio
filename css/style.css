@@ -1,0 +1,354 @@
+/* ===========================
+   Global Styles
+=========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0F172A;
+    color:white;
+}
+
+/* ===========================
+   Sections
+=========================== */
+.profile-page,
+.aboutme-page,
+.profile-slider,
+.exploreme-slider,
+.journey-page {
+    min-height: 100vh;
+}
+
+.profile-page,
+.profile-slider,
+.journey-page,
+.footer-page {
+    background: #0b1220;
+}
+
+.aboutme-page,
+.exploreme-slider,
+.footer-page {
+    background: #101a2e;
+}
+
+.aboutme-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.exploreme-slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+
+
+/* ===========================
+   Hero Section
+=========================== */
+
+
+/* ===========================
+   About Me
+=========================== */
+
+
+/* ===========================
+   Profile Slider
+=========================== */
+.profile-slider {
+    position: relative;
+}
+
+.slider-track {
+    position: relative;
+
+    width: 100%;
+    height: 500px;
+}
+
+.profile-prev, 
+.profile-next {
+    position: absolute;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 24px;
+
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+
+    z-index: 10;
+}
+
+.profile-prev {
+    left: 20px;
+}
+
+.profile-next {
+    right: 20px;
+}
+
+.profile-prev:hover,
+.profile-next:hover {
+    opacity: 1;
+}
+
+.profile-card {
+    width: 380px;
+    height: 500px;
+
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    position: absolute;
+    transform: translateX(-50%);
+
+    top: 0;
+    left: 50%;
+
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.profile-card.previous {
+    transform: translateX(-50%) translateX(-300px) scale(0.95);
+    opacity: 0.5;
+    z-index: 2;
+}
+
+.profile-card.current {
+    transform: translateX(-50%) scale(1.05);
+    opacity: 1;
+    z-index: 3;
+}
+
+.profile-card.next {
+    transform: translateX(-50%) translateX(300px) scale(0.95);
+    opacity: 0.5;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.profile-card.previous:hover,
+.profile-card.next:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.profile-card.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card-background img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.card-background{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.card-overlay {
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 30px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+}
+
+.card-logo {
+    font-size: 25px;
+}
+
+.card-description {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.visit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    width: fit-content;
+    align-items: center;
+    margin: 0 auto;
+
+    text-decoration: none;
+    border-radius: 10px;
+
+    font-size: 15px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.85);
+    color: #222;
+    transition: opacity 0.2s ease;
+}
+
+.visit-btn:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        width: 300px;
+    }
+
+    .previous {
+        transform: translateX(-45%) scale(0.95);
+    }
+
+    .next {
+        transform: translateX(-45%) scale(0.95);
+    }
+}
+
+/* ===========================
+   Explore Me
+=========================== */
+.explore-slider {
+    position: relative;
+}
+
+.explore-slides {
+    position: relative;
+    width: 700px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.explore-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 700px;
+    height: 420px;
+
+    overflow: hidden;
+    border-radius: 20px;
+    pointer-events: none;
+
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.explore-card.current {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0) scale(1);
+    z-index: 3;
+}
+
+.explore-card.previous {
+    opacity: 0.5;
+    transform: translateX(-55%) scale(0.9);
+    z-index: 2;
+    pointer-events: auto;
+}
+
+.explore-card.next {
+    opacity: 0.5;
+    transform: translateX(55%) scale(0.9);
+    z-index: 2;
+    pointer-events: auto;
+}
+
+.explore-card.hidden {
+    opacity: 0;
+}
+
+.explore-card.previous:hover,
+.explore-card.next:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.explore-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.explore-card.current:hover {
+    transform: scale(1.02);
+}
+
+.explore-prev,
+.explore-next {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    
+    cursor: pointer;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+
+    z-index: 10;
+}
+
+/* ===========================
+   Journey
+=========================== */
+
+
+/* ===========================
+   Footer
+=========================== */

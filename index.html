@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Zack's Portfolio</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">My Portfolio</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <section id="home" class="profile-page">
+        <div class="profile-container">
+            <div class="desc">
+                <h1 class="main-text">Hello! My name is Zack</h1>
+                <p style="padding-bottom: 10px;" class="sub-text"><br>
+                I am just an ordinary college student<br>
+                While it's hard living in this cruel world, i can give you a word of advice
+                "Do your best and do it to the fullest"</p>
+            </div>
+            <div class="soc-buttons">
+                <!-- Change into Github -->
+                <a href="https://www.instagram.com/zackops.xdx/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <!-- Change into LinkedIn -->
+                <a href="https://www.youtube.com/@zackopsxdx4624" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://x.com/ZackopsXD" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <div class="hero-Icon">
+                <img src="images/~.png" alt="Zack Picture">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="aboutme-page">
+        <div class="profile-icon">
+            <img src="images/~.png" alt="Zack Picture">
+        </div>
+        <div class="about-content">
+            <h1>Let me reintroduce myself</h1>
+            <p>My name is Zack, you might know me as Zackops</p>
+            <div class="profile-buttons">
+                <a href="https://wa.me/62811182380" class="contact-btn" target="_blank">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="profile" class="profile-slider">
+        <div class="slider-track">
+
+            <!-- GitHub -->
+            <div class="profile-card">
+                <div class="card-background">
+                    <img src="images/Profilebackground1.png" alt="GitHub Background">
+                </div>
+
+                <div class="card-overlay">
+                    <div class="card-header">
+                        <i class="fab fa-github card-logo"></i>
+                        <h2>GitHub</h2>
+                    </div>
+
+                    <p class="card-description">
+                        Explore my programming projects and repositories.
+                    </p>
+
+                    <a href="https://www.linkedin.com/in/muhamad-bobbin-rizky-575a6232b/"
+                    class="visit-btn"
+                    target="_blank">
+                        Visit GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="profile-card">
+                <div class="card-background">
+                    <img src="images/Profilebackground2.png" alt="LinkedIn Background">
+                </div>
+
+                <div class="card-overlay">
+
+                    <div class="card-header">
+                        <i class="fab fa-linkedin card-logo"></i>
+                        <h2>LinkedIn</h2>
+                    </div>
+
+                    <p class="card-description">
+                        I’d love to stay connected and keep in touch with you. 
+                        Feel free to reach out to me!    
+                    </p>
+
+                    <a href="https://LinkedIn.com/YourUsername" class="visit-btn" target="_blank">
+                        Visit LikedIn
+                    </a>
+                </div>
+            </div>
+
+            <!-- Discord -->
+            <div class="profile-card">
+                <div class="card-background">
+                    <img src="images/Profilebackground3.png" alt="Discord Background">
+                </div>
+
+                <div class="card-overlay">
+
+                    <div class="card-header">
+                        <i class="fab fa-discord card-logo"></i>
+                        <h2>Discord</h2>
+                    </div>
+
+                    <p class="card-description">
+                        Join me on Discord to chat, share ideas, and collaborate on projects. 
+                        Let's build a community together!    
+                    </p>
+
+                    <a href="https://discord.com/channels/575886769502027817/575886769502027819" class="visit-btn" target="_blank">
+                        Visit Discord
+                    </a>
+                </div>
+            </div>
+
+            <!-- YouTube -->
+            <div class="profile-card">
+                <div class="card-background">
+                    <img src="images/Profilebackground4.png" alt="Youtube Background">
+                </div>
+
+                <div class="card-overlay">
+
+                    <div class="card-header">
+                        <i class="fab fa-youtube card-logo"></i>
+                        <h2>Youtube</h2>
+                    </div>
+
+                    <p class="card-description">
+                        Come and join me on my Youtube channel, where I share my gaming experiences and adventures. 
+                        Let's have fun together!  
+                    </p>
+
+                    <a href="https://Youtube.com/@ZackopsXDX" class="visit-btn" target="_blank">
+                        Visit Youtube
+                    </a>
+                </div>
+            </div>
+        </div>
+        <button class="profile-prev" onclick="ProfilePreviousSlide()">❮</button>
+        <button class="profile-next" onclick="ProfileNextSlide()">❯</button>
+    </section>
+
+    <section id="exploreme" class="exploreme-slider">
+        <div class="slider-text">
+            <h1 class="text2">
+                You might know me from someplace else? Let's have a look!
+            </h1>
+            <div class="explore-slider">
+                <div class="explore-slides">
+                    <div class="explore-card">
+                        <img src="images/Game1.png" alt="image1">
+                    </div>
+                    <div class="explore-card">
+                        <img src="images/Game2.png" alt="image2">   
+                    </div>                         
+                    <div class="explore-card">    
+                        <img src="images/Game3.png" alt="image3">
+                    </div>
+                    <div class="explore-card">    
+                        <img src="images/Game4.png" alt="image4">
+                    </div>
+                    <div class="explore-card">    
+                        <img src="images/Game5.png" alt="image5">
+                    </div>
+                    <div class="explore-card">
+                        <img src="images/Game6.png" alt="image6">
+                    </div>
+                    <div class="explore-card">    
+                        <img src="images/Game7.png" alt="image6">
+                    </div>
+                    <div class="explore-card">    
+                        <img src="images/Game8.png" alt="image6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="journey-page">
+
+    </section>
+
+    <section id="footer" class="footer-page">
+
+    </section>
+</body>
+</html>
