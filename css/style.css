@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 /* ===========================
    Global Styles
 =========================== */
@@ -8,7 +9,7 @@
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Sora', Arial, Helvetica, sans-serif;
     background:#0F172A;
     color:white;
 }
@@ -61,7 +62,35 @@ body{
 /* ===========================
    Navbar
 =========================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
 
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    opacity: 0.6;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
 
 /* ===========================
    Hero Section
